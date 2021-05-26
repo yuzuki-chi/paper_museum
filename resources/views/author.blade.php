@@ -7,23 +7,14 @@
     <title>Paper Museum</title>
 </head>
 <body>
-
+<pre>
 <?php
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
-/*
-DB::table('papers')->insert([
-    'title' => 'サンプル論文',
-    'author_id' => 1,
-    'submit' => '2021/05/25',
-    'paper_type' => 1,
-    'belonging_id' => 1,
-    'lab_id' => 1,
-    'description' => 'これは概要です.'
-]);
-*/
-$users = DB::table('papers')->get();
-var_dump($users);
+
+$authors = DB::table('authors')->get();
+var_dump($authors);
 ?>
+</pre>
 </body>
 </html>
