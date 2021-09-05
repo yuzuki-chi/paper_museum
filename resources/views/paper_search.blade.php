@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.pm_basic')
 
 @section('title', '論文検索')
 
@@ -10,6 +10,10 @@
 
     @else
     検索用語を入力してください。
+    <form action="/paper/search" method="get">
+        <input type="text" name="keyword" id="search_text">
+        <input type="submit" value="検索">
+    </form>
     @endif
 </div>
 @endsection

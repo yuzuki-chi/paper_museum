@@ -14,15 +14,23 @@ use App\Http\Controllers\PapersController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', function () {
     return view('index');
 });
 
-/* paper */
+/**
+ * ログイン機能
+ */
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+/**
+ * 基本機能
+ */
 
 Route::get('/paper', [PapersController::class, 'index']);
 

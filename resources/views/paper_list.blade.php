@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.pm_basic')
 
 @section('title', '論文ページ')
 
