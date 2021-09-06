@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+
 use App\Http\Controllers\PapersController;
 
 /*
@@ -50,4 +51,3 @@ Route::get('/paper/{paper_id}', [PapersController::class, 'show']);
 Route::get('/paper/{paper_id}/edit', function ($paper_id) {
     return view('paper_edit', ['paper_id'=>$paper_id]);
 });
-

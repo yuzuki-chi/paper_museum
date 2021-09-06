@@ -10,7 +10,7 @@ class PapersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
-     *
+     * ./vendor/bin/sail artisan db:seed --class=PapersTableSeeder
      * @return void
      */
     public function run()

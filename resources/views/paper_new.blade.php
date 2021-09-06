@@ -24,6 +24,9 @@
         論文の概要：
         <textarea name="make_description" id="make_description" cols="30" rows="10">4294967295文字まで</textarea><br>
 
+        ファイル選択：
+        <input type="file" name="make_file" id="make_file"><br>
+
         <button id="make_submit">新規作成</button>
 
         <script>
@@ -35,7 +38,7 @@
                 xhr.onload=function () {
                     alert(xhr.responseText);
                 }
-                xhr.open('POST', '/', true);
+                xhr.open('POST', '/api/v1/create_paper', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
                 xhr.send("text="+document.getElementById('make_title').value);
             });
