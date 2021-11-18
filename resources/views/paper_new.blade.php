@@ -38,9 +38,19 @@
                 xhr.onload=function () {
                     alert(xhr.responseText);
                 }
-                xhr.open('POST', '/api/v1/create_paper', true);
+                xhr.open('POST', '/api/papers/', true);
                 xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                xhr.send("text="+document.getElementById('make_title').value);
+
+                const values = {
+                    title : document.getElementById('make_title').value,
+                    submit : document.getElementById('make_submitday').value,
+                    paper_type : document.getElementById('make_type').value,
+                    belonging_id : document.getElementById('make_belonging').value,
+                    lab_id : document.getElementById('make_lab').value,
+                    description : document.getElementById('make_description').value
+                };
+                xhr.send(JSON.stringify(values));
+                console.log(JSON.stringify(values));
             });
         </script>
     </div>
