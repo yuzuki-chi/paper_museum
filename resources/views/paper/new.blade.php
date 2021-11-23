@@ -8,6 +8,19 @@
     <title>paper create page</title>
 </head>
 <body>
+@if (Route::has('login'))
+    <div>
+        @auth
+            <a href="{{ url('/dashboard') }}">マイページ</a>
+        @else
+            <a href="{{ route('login') }}">ログイン</a>
+
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}">アカウント新規作成</a>
+            @endif
+        @endauth
+    </div>
+@endif
 <form action="/paper/new" method="post">
     @csrf
     title: <input type="text" name="title"><br/>

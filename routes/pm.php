@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaperController;
+use \Illuminate\Support\Facades\Auth;
 
 Route::get('/pm', function () {
    return view('pm');
@@ -9,6 +10,10 @@ Route::get('/pm', function () {
 
 Route::get('/paper', [PaperController::class, 'index']);
 Route::get('/paper/new', function () {
-    return view('paper.new');
+    if (Auth::check()) {
+        return view('paper.new');
+    } else {
+        return redirect('login');
+    }
 });
 Route::post('/paper/new', [PaperController::class, 'store']);

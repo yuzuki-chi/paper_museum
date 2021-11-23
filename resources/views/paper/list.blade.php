@@ -8,10 +8,12 @@
     <title>paper list</title>
 </head>
 <body>
+<h3>論文リスト</h3>
 <ul>
     @foreach($papers as $paper)
     <li>{{$paper->title}}</li>
     @endforeach
 </ul>
+<p><a href="/paper/new">新規作成</a></p>
 </body>
 </html>
