@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaperController;
+use App\Http\Controllers\AuthorController;
 use \Illuminate\Support\Facades\Auth;
 
 Route::get('/pm', function () {
@@ -17,3 +18,16 @@ Route::get('/paper/new', function () {
     }
 });
 Route::post('/paper/new', [PaperController::class, 'store']);
+
+/**
+ * Author
+ */
+Route::get('/author', [AuthorController::class, 'view_list']);
+Route::get('/author/new', function () {
+    if (Auth::check()) {
+        return view('author.new');
+    } else {
+        return redirect('login');
+    }
+});
+Route::post('/author/new', [AuthorController::class, 'store']);
