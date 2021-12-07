@@ -8,22 +8,10 @@
     <title>paper create page</title>
 </head>
 <body>
-@if (Route::has('login'))
-    <div>
-        @auth
-            <a href="{{ url('/dashboard') }}">マイページ</a>
-        @else
-            <a href="{{ route('login') }}">ログイン</a>
-
-            @if (Route::has('register'))
-                <a href="{{ route('register') }}">アカウント新規作成</a>
-            @endif
-        @endauth
-    </div>
-@endif
 <form action="/paper/new" method="post">
     @csrf
     title: <input type="text" name="title"><br/>
+    author_id: <input type="text" name="author_id">(いずれは名前->サジェスト機能->格納の機構を再現 )<br/>
     <input type="submit" value="新規作成">
 </form>
 </body>

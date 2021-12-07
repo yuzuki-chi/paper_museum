@@ -17,6 +17,7 @@ class CreatePapersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
+            $table->integer('author_id')->nullable();
         });
     }
 

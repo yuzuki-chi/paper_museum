@@ -9,5 +9,12 @@
 </head>
 <body>
 <h2>{{$paper->title}}</h2>
+
+@if(!is_null($author))
+<h3>{{$author->name_family}} {{$author->name_first}}</h3>
+@else
+<h3>著者不詳</h3>
+@endif
+
 </body>
 </html>
