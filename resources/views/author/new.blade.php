@@ -8,12 +8,13 @@
     <title>paper create page</title>
 </head>
 <body>
+<h2>著者の新規作成</h2>
 <form action="/author/new" method="post">
     @csrf
     name_family: <input type="text" name="name_family"><br/>
-    name_family_kana: <input type="text" name="name_family_kana">
+    name_family_kana: <input type="text" name="name_family_kana"><br/>
     name_first: <input type="text" name="name_first"><br/>
-    name_first_kana: <input type="text" name="name_first_kana">
+    name_first_kana: <input type="text" name="name_first_kana"><br/>
     <input type="submit" value="新規作成">
 </form>
 </body>

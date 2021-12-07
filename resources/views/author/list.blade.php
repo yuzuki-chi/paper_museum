@@ -10,9 +10,13 @@
 <body>
 <h3>著者リスト</h3>
 <ul>
+    @if($authors!==[])
     @foreach($authors as $author)
         <li>{{$author->name_family}} {{$author->name_first}} さん</li>
     @endforeach
+    @else
+        <li>著者データはありません。</li>
+    @endif
 </ul>
 <p><a href="/author/new">新規作成</a></p>
 </body>
