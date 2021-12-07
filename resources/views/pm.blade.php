@@ -8,6 +8,10 @@
     <title>Paper Museum</title>
 </head>
 <body>
-    ここはPaper Museumです。
+    <p>ここはPaper Museumです。</p>
+    <ul>
+        <li><a href="/paper/">論文一覧はこちら</a></li>
+        <li><a href="/author/">著者一覧はこちら</a></li>
+    </ul>
 </body>
 </html>
