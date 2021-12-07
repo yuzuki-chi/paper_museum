@@ -16,5 +16,15 @@
 <h3>著者不詳</h3>
 @endif
 
+<p>
+@if($paper->file_locate == 1)
+    <a href='{{$file_entity}}'>
+        論文リンクはこちら
+    </a>
+@else
+    論文のリンクが登録されていません。
+@endif
+</p>
+
 </body>
 </html>

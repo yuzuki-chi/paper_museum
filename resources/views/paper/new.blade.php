@@ -8,10 +8,11 @@
     <title>paper create page</title>
 </head>
 <body>
-<form action="/paper/new" method="post">
+<form action="/paper/new" method="post" enctype="multipart/form-data">
     @csrf
     title: <input type="text" name="title"><br/>
     author_id: <input type="text" name="author_id">(いずれは名前->サジェスト機能->格納の機構を再現 )<br/>
+    PDFファイルのアップロード: <input type="file" name="paper_pdf"><br/>
     <input type="submit" value="新規作成">
 </form>
 </body>

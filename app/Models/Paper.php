@@ -10,5 +10,7 @@ class Paper extends Model
     protected $fillable = [
         'title',
         'author_id',
+        'url',
+        'file_locate',
     ];
 }
