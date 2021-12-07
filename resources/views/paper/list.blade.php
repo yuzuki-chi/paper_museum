@@ -10,9 +10,17 @@
 <body>
 <h3>論文リスト</h3>
 <ul>
+    @if($papers!==[])
     @foreach($papers as $paper)
-    <li>{{$paper->title}}</li>
+        <li>
+            <a href='/paper/{{$paper->id}}'>
+                {{$paper->title}}
+            </a>
+        </li>
     @endforeach
+    @else
+        <li>論文データはありません。</li>
+    @endif
 </ul>
 <p><a href="/paper/new">新規作成</a></p>
 </body>

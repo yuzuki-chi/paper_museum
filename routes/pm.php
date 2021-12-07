@@ -9,7 +9,10 @@ Route::get('/pm', function () {
    return view('pm');
 });
 
-Route::get('/paper', [PaperController::class, 'index']);
+/**
+ * Paper
+ */
+Route::get('/paper', [PaperController::class, 'view_list']);
 Route::get('/paper/new', function () {
     if (Auth::check()) {
         return view('paper.new');
@@ -18,6 +21,7 @@ Route::get('/paper/new', function () {
     }
 });
 Route::post('/paper/new', [PaperController::class, 'store']);
+Route::get('/paper/{paper_id}', [PaperController::class, 'view_specific']);
 
 /**
  * Author

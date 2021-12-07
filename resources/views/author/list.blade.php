@@ -13,7 +13,7 @@
     @if($authors!==[])
     @foreach($authors as $author)
         <li>
-            <a href='./{{$author->id}}'>
+            <a href='/author/{{$author->id}}'>
                 {{$author->name_family}} {{$author->name_first}}
             </a>
         </li>
