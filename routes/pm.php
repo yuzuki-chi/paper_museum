@@ -31,3 +31,4 @@ Route::get('/author/new', function () {
     }
 });
 Route::post('/author/new', [AuthorController::class, 'store']);
+Route::get('/author/{author_id}', [AuthorController::class, 'view_specific']);

@@ -12,7 +12,11 @@
 <ul>
     @if($authors!==[])
     @foreach($authors as $author)
-        <li>{{$author->name_family}} {{$author->name_first}} さん</li>
+        <li>
+            <a href='./{{$author->id}}'>
+                {{$author->name_family}} {{$author->name_first}}
+            </a>
+        </li>
     @endforeach
     @else
         <li>著者データはありません。</li>
