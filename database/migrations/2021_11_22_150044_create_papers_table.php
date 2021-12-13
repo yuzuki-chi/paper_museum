@@ -17,9 +17,11 @@ class CreatePapersTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('title');
+            $table->timestamp('submit')->nullable();
             $table->integer('author_id')->nullable();
             $table->string('url')->nullable();
             $table->integer('file_locate')->default(0); //0:nil 1:local 2:external
+            $table->text('description')->nullable(); //65,535/4byte= 16,384 type
         });
     }
 

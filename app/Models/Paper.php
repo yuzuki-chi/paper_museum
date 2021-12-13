@@ -9,8 +9,10 @@ class Paper extends Model
 {
     protected $fillable = [
         'title',
+        'submit',
         'author_id',
         'url',
         'file_locate',
+        'description',
     ];
 }

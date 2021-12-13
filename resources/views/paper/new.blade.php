@@ -11,8 +11,10 @@
 <form action="/paper/new" method="post" enctype="multipart/form-data">
     @csrf
     title: <input type="text" name="title"><br/>
+    submit: <input type="date" name="submit"><br/>
     author_id: <input type="text" name="author_id">(いずれは名前->サジェスト機能->格納の機構を再現 )<br/>
     PDFファイルのアップロード: <input type="file" name="paper_pdf"><br/>
+    description: <textarea name="description" id="description" cols="30" rows="10"></textarea><br/>
     <input type="submit" value="新規作成">
 </form>
 </body>

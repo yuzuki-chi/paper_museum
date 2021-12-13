@@ -26,5 +26,23 @@
 @endif
 </p>
 
+<h4>提出日</h4>
+<p>
+    @if(!is_null($paper->submit))
+        {{$paper->submit}}
+    @else
+        提出日が登録されていません。
+    @endif
+</p>
+
+<h4>概要</h4>
+<p>
+    @if(!is_null($paper->description))
+        {{ $paper->description }}
+    @else
+        論文の概要が登録されていません。
+    @endif
+</p>
+
 </body>
 </html>

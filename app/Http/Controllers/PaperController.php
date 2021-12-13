@@ -40,9 +40,11 @@ class PaperController extends Controller
 
         $paper = [
             'title' => $req->title,
+            'submit' => $req->submit ?: null,
             'author_id' => $req->author_id ?: null,
             'url' => $pdf_path ?: null,
             'file_locate' => $file_locate ?: 0,
+            'description' => $req->description ?: null,
         ];
         Paper::create($paper);
         return view('paper.list', ['papers' => Paper::all()]);
